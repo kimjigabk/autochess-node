@@ -1,0 +1,311 @@
+
+<%- include('partials/header') %>
+<div class="container-fluid" id="top">
+  <div class="row">
+    <div class="col-md-3 sidemenu flex-md-nowrap">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <h1>Current Units: <span>#</span></h1>
+        </li>
+      </ul>
+
+      <ul class="nav flex-column mb-2">
+        <li class="nav-item">Active Synergies: </li>
+        <li class="nav-item synergy"></li>
+        <li class="nav-item d-none d-md-inline-block">　</li>
+        <!-- <li class="nav-item">Kinds: </li>
+        <li class="nav-item kinds"></li> -->
+      </ul>
+      <button id="save" type="button" class="btn btn-dark">Save</button>
+      <button type="button" class="btn btn-dark reset">Reset</button>
+    </div>
+
+    <div class="col-md-9 ml-sm-auto mainmenu">
+      <div class="buttons">
+        <div class="gold-one">
+          <p>1골드 (12)</p>
+          <div class="unitBox"> <span class="unitText">Anti-mage</span> <button class="<%=gg.antimage%> b antimage" type="button" name="antimage">안메</button></div>
+          <div class="unitBox"> <span class="unitText">Axe</span> <button class="<%=gg.axe%> b axe" type="button" name="axe">액스</button> </div>
+          <div class="unitBox"> <span class="unitText">Batrider</span> <button class="<%=gg.batrider%> b batrider" type="button" name="batrider">뱃라</button></div>
+          <div class="unitBox"> <span class="unitText">Bounty <br />Hunter</span> <button class="<%=gg.bountyhunter%> b bountyhunter" type="button" name="bountyhunter">바헌</button> </div>
+          <div class="unitBox"> <span class="unitText">Clockwerk</span> <button class="<%=gg.clockwerk%> b clockwerk" type="button" name="clockwerk">클락</button></div>
+          <div class="unitBox"> <span class="unitText">Drow Ranger</span> <button class="<%=gg.drowranger%> b drowranger" type="button" name="drowranger">드렌</button> </div>
+          <div class="unitBox"> <span class="unitText">Enchantress</span> <button class="<%=gg.enchantress%> b enchantress" type="button" name="enchantress">인챈</button> </div>
+          <div class="unitBox"> <span class="unitText">Ogre-Magi</span> <button class="<%=gg.ogremagi%> b ogremagi" type="button" name="ogremagi">오거</button> </div>
+          <div class="unitBox"> <span class="unitText">Shadow <br />Shaman</span> <button class="<%=gg.shadowshaman%> b shadowshaman" type="button" name="shadowshaman">샤먼</button></div>
+          <div class="unitBox"> <span class="unitText">Tinker</span> <button class="<%=gg.tinker%> b tinker" type="button" name="tinker">팅커</button></div>
+          <div class="unitBox"> <span class="unitText">Tiny</span> <button class="<%=gg.tiny%> b tiny" type="button" name="tiny">타이니</button></div>
+          <div class="unitBox"> <span class="unitText">Tusk</span> <button class="<%=gg.tusk%> b tusk" type="button" name="tusk">터스크</button> </div>
+        </div>
+        <div class="gold-two">
+          <p>2골드 (14)</p>
+          <div class="unitBox"> <span class="unitText">Beastmaster</span> <button class="<%=gg.beastmaster%> b beastmaster" type="button" name="beastmaster">비마</button> </div>
+          <div class="unitBox"> <span class="unitText">Chaos Knight</span> <button class="<%=gg.chaosknight%> b chaosknight" type="button" name="chaosknight">카나</button></div>
+          <div class="unitBox"> <span class="unitText">Crystal <br />Maiden</span> <button class="<%=gg.crystalmaiden%> b crystalmaiden" type="button" name="crystalmaiden">크메</button></div>
+          <div class="unitBox"> <span class="unitText">Furion</span> <button class="<%=gg.furion%> b furion" type="button" name="furion">퓨리온</button> </div>
+          <div class="unitBox"> <span class="unitText">Juggernaut</span> <button class="<%=gg.juggernaut%> b juggernaut" type="button" name="juggernaut">저거넛</button> </div>
+          <div class="unitBox"> <span class="unitText">Luna</span> <button class="<%=gg.luna%> b luna" type="button" name="luna">루나</button></div>
+          <div class="unitBox"> <span class="unitText">Morphling</span> <button class="<%=gg.morphling%> b morphling" type="button" name="morphling">물딩</button></div>
+          <div class="unitBox"> <span class="unitText">Puck</span> <button class="<%=gg.puck%> b puck" type="button" name="puck">퍽</button> </div>
+          <div class="unitBox"> <span class="unitText">Queen of <br>Pain</span> <button class="<%=gg.queenofpain%> b queenofpain" type="button" name="queenofpain">퀸오페</button></div>
+          <div class="unitBox"> <span class="unitText">Timbersaw</span> <button class="<%=gg.timbersaw%> b timbersaw" type="button" name="timbersaw">팀버</button> </div>
+          <div class="unitBox"> <span class="unitText">Slardar</span> <button class="<%=gg.slardar%> b slardar" type="button" name="slardar">슬라다</button> </div>
+          <div class="unitBox"> <span class="unitText">Slark</span> <button class="<%=gg.slark%> b slark" type="button" name="slark">슬라크</button></div>
+          <div class="unitBox"> <span class="unitText">Treant <br>Protector</span> <button class="<%=gg.treantprotector%> b treantprotector" type="button" name="treantprotector">나무</button></div>
+          <div class="unitBox"> <span class="unitText">Witch Doctor</span> <button class="<%=gg.witchdoctor%> b witchdoctor" type="button" name="witchdoctor">위닥</button> </div>
+        </div>
+        <div class="gold-three">
+          <p>3골드 (15)</p>
+          <div class="unitBox"> <span class="unitText">Abbadon</span><button class="<%=gg.abbadon%> b abbadon" type="button" name="abbadon">아바돈</button> </div>
+          <div class="unitBox"> <span class="unitText">Lina</span><button class="<%=gg.lina%> b lina" type="button" name="lina">리나</button> </div>
+          <div class="unitBox"> <span class="unitText">Lycan</span><button class="<%=gg.lycan%> b lycan" type="button" name="lycan">라이칸</button> </div>
+          <div class="unitBox"> <span class="unitText">Mirana</span> <button class="<%=gg.mirana%> b mirana" type="button" name="mirana">미라나</button> </div>
+          <div class="unitBox"> <span class="unitText">Omniknight</span> <button class="<%=gg.omniknight%> b omniknight" type="button" name="omniknight">옴나</button> </div>
+          <div class="unitBox"> <span class="unitText">Phantom <br>Assassin</span> <button class="<%=gg.phantomassassin%> b phantomassassin" type="button" name="phantomassassin">팬어</button> </div>
+          <div class="unitBox"> <span class="unitText">Razor</span> <button class="<%=gg.razor%> b razor" type="button" name="razor">레이저</button> </div>
+          <div class="unitBox"> <span class="unitText">Riki</span> <button class="<%=gg.riki%> b riki" type="button" name="riki">리키</button> </div>
+          <div class="unitBox"> <span class="unitText">Sandking</span> <button class="<%=gg.sandking%> b sandking" type="button" name="sandking">전갈</button> </div>
+          <div class="unitBox"> <span class="unitText">Sniper</span> <button class="<%=gg.sniper%> b sniper" type="button" name="sniper">스나</button> </div>
+          <div class="unitBox"> <span class="unitText">Shadow <br>Fiend</span> <button class="<%=gg.shadowfiend%> b shadowfiend" type="button" name="shadowfiend">쉐핀</button> </div>
+          <div class="unitBox"> <span class="unitText">Terrorblade</span><button class="<%=gg.terrorblade%> b terrorblade" type="button" name="terrorblade">테블</button> </div>
+          <div class="unitBox"> <span class="unitText">Venomancer</span> <button class="<%=gg.venomancer%> b venomancer" type="button" name="venomancer">베노</button> </div>
+          <div class="unitBox"> <span class="unitText">Viper</span> <button class="<%=gg.viper%> b viper" type="button" name="viper">바이퍼</button> </div>
+          <div class="unitBox"> <span class="unitText">Windranger</span> <button class="<%=gg.windranger%> b windranger" type="button" name="windranger">윈레</button> </div>
+        </div>
+        <div class="gold-four">
+          <p>4골드 (11)</p>
+          <div class="unitBox"> <span class="unitText">Alchemist</span> <button class="<%=gg.alchemist%> b alchemist" type="button" name="alchemist">알케</button> </div>
+          <div class="unitBox"> <span class="unitText">Disruptor</span> <button class="<%=gg.disruptor%> b disruptor" type="button" name="disruptor">디럽</button> </div>
+          <div class="unitBox"> <span class="unitText">Doom</span> <button class="<%=gg.doom%> b doom" type="button" name="doom">둠</button> </div>
+          <div class="unitBox"> <span class="unitText">Dragon <br>Knight</span> <button class="<%=gg.dragonknight%> b dragonknight" type="button" name="dragonknight">드나</button> </div>
+          <div class="unitBox"> <span class="unitText">Keeper of <br>the Light</span> <button class="<%=gg.keeperofthelight%> b keeperofthelight" type="button" name="keeperofthelight">할배</button> </div>
+          <div class="unitBox"> <span class="unitText">Kunkka</span><button class="<%=gg.kunkka%> b kunkka" type="button" name="kunkka">컨카</button> </div>
+          <div class="unitBox"> <span class="unitText">Lone Druid</span><button class="<%=gg.lonedruid%> b lonedruid" type="button" name="lonedruid">론드</button> </div>
+          <div class="unitBox"> <span class="unitText">Medusa</span><button class="<%=gg.medusa%> b medusa" type="button" name="medusa">메두사</button> </div>
+          <div class="unitBox"> <span class="unitText">Necrophos</span> <button class="<%=gg.necrophos%> b necrophos" type="button" name="necrophos">네크로</button> </div>
+          <div class="unitBox"> <span class="unitText">Templar <br>Assassin</span> <button class="<%=gg.templarassassin%> b templarassassin" type="button" name="templarassassin">템어</button> </div>
+          <div class="unitBox"> <span class="unitText">Troll Warlord</span> <button class="<%=gg.trollwarlord%> b trollwarlord" type="button" name="trollwarlord">트워</button> </div>
+        </div>
+        <div class="gold-five">
+          <p>5골드 (6)</p>
+          <section id="synJob"></section>
+          <div class="unitBox"> <span class="unitText">Death <br>Prophet</span> <button class="<%=gg.deathprophet%> b deathprophet" type="button" name="deathprophet">데프</button> </div>
+          <div class="unitBox"> <span class="unitText">Enigma</span> <button class="<%=gg.enigma%> b enigma" type="button" name="enigma">에닉마</button> </div>
+          <div class="unitBox"> <span class="unitText">Gyrocopter</span> <button class="<%=gg.gyrocopter%> b gyrocopter" type="button" name="gyrocopter">자이루</button> </div>
+          <div class="unitBox"> <span class="unitText">Lich</span> <button class="<%=gg.lich%> b lich" type="button" name="lich">리치</button> </div>
+          <div class="unitBox"> <span class="unitText">Techies</span> <button class="<%=gg.techies%> b techies" type="button" name="techies">테키</button> </div>
+          <div class="unitBox"> <span class="unitText">Tidehunter</span> <button class="<%=gg.tidehunter%> b tidehunter" type="button" name="tidehunter">타헌</button> </div>
+        </div>
+      </div>
+
+      <div class="buttons-secondpage">
+        <p></p>
+        <h2 class="d-none d-md-inline-block">자기직업만 (70)</h2>
+        <div class="elf">
+          <p>엘프 (3)(6)(9)</p>
+          <button class="<%=gg.antimage%> b antimage" type="button" name="antimage">안메</button>
+          <button class="<%=gg.luna%> b luna" type="button" name="luna">루나</button>
+          <button class="<%=gg.furion%> b furion" type="button" name="furion">말퓨</button>
+          <button class="<%=gg.treantprotector%> b treantprotector" type="button" name="treantprotector">나무</button>
+          <button class="<%=gg.puck%> b puck" type="button" name="puck">퍽</button>
+          <button class="<%=gg.phantomassassin%> b phantomassassin" type="button" name="phantomassassin">팬어</button>
+          <button class="<%=gg.windranger%> b windranger" type="button" name="windranger">윈레</button>
+          <button class="<%=gg.mirana%> b mirana" type="button" name="mirana">미라나</button>
+          <button class="<%=gg.templarassassin%> b templarassassin" type="button" name="templarassassin">템어</button>
+        </div>
+        <div class="human">
+          <p>휴먼 (2)(4)(6)</p>
+          <button class="<%=gg.crystalmaiden%> b crystalmaiden" type="button" name="crystalmaiden">크메</button>
+          <button class="<%=gg.lycan%> b lycan" type="button" name="lycan">라이칸</button>
+          <button class="<%=gg.lina%> b lina" type="button" name="lina">리나</button>
+          <button class="<%=gg.omniknight%> b omniknight" type="button" name="omniknight">옴나</button>
+          <button class="<%=gg.dragonknight%> b dragonknight" type="button" name="dragonknight">드나</button>
+          <button class="<%=gg.kunkka%> b kunkka" type="button" name="kunkka">컨카</button>
+        </div>
+        <div class="demon">
+          <p>데몬(1)</p>
+          <button class="<%=gg.queenofpain%> b queenofpain" type="button" name="queenofpain">퀸오페</button>
+          <button class="<%=gg.chaosknight%> b chaosknight" type="button" name="chaosknight">카나</button>
+          <button class="<%=gg.shadowfiend%> b shadowfiend" type="button" name="shadowfiend">쉐핀</button>
+          <button class="<%=gg.terrorblade%> b terrorblade" type="button" name="terrorblade">테블</button>
+          <button class="<%=gg.doom%> b doom" type="button" name="doom">둠</button>
+        </div>
+        <div class="mech">
+          <p>메크 (2)(4)</p>
+          <button class="<%=gg.clockwerk%> b clockwerk" type="button" name="clockwerk">클락</button>
+          <button class="<%=gg.tinker%> b tinker" type="button" name="tinker">팅커</button>
+          <button class="<%=gg.timbersaw%> b timbersaw" type="button" name="timbersaw">팀버</button>
+          <button class="<%=gg.gyrocopter%> b gyrocopter" type="button" name="gyrocopter">자이루</button>
+          <button class="<%=gg.techies%> b techies" type="button" name="techies">테키</button>
+        </div>
+        <div class="orc">
+          <p>오크 (2)(4)</p>
+          <button class="<%=gg.axe%> b axe" type="button" name="axe">액스</button>
+          <button class="<%=gg.beastmaster%> b beastmaster" type="button" name="beastmaster">비마</button>
+          <button class="<%=gg.juggernaut%> b juggernaut" type="button" name="juggernaut">저거넛</button>
+          <button class="<%=gg.disruptor%> b disruptor" type="button" name="disruptor">디럽</button>
+        </div>
+        <div class="ogre dwarf">
+          <p>오거 (1)　드워프(2)</p>
+          <button class="<%=gg.ogremagi%> b ogremagi" type="button" name="ogremagi">오거</button>
+          <button class="<%=gg.sniper%> b sniper" type="button" name="sniper">스나</button>
+          <button class="<%=gg.gyrocopter%> b gyrocopter" type="button" name="gyrocopter">자이루</button>
+        </div>
+        <!-- <div class="dwarf">
+            <p>드워프(2)</p>
+            <button class="g b sniper" type="button" name="sniper">스나</button>
+            <button class="g b gyrocopter" type="button" name="gyrocopter">자이루</button>
+          </div> -->
+        <div class="dragon">
+          <p>드래곤 (3)</p>
+          <button class="<%=gg.puck%> b puck" type="button" name="puck">퍽</button>
+          <button class="<%=gg.viper%> b viper" type="button" name="viper">바이퍼</button>
+          <button class="<%=gg.dragonknight%> b dragonknight" type="button" name="dragonknight">드나</button>
+        </div>
+        <div class="ass">
+          <p>어쌔신 (3)(6)(9)</p>
+          <button class="<%=gg.bountyhunter%> b bountyhunter" type="button" name="bountyhunter">바헌</button>
+          <button class="<%=gg.queenofpain%> b queenofpain" type="button" name="queenofpain">퀸오페</button>
+          <button class="<%=gg.morphling%> b morphling" type="button" name="morphling">물딩</button>
+          <button class="<%=gg.slark%> b slark" type="button" name="slark">슬라크</button>
+          <button class="<%=gg.phantomassassin%> b phantomassassin" type="button" name="phantomassassin">팬어</button>
+          <button class="<%=gg.sandking%> b sandking" type="button" name="sandking">전갈</button>
+          <button class="<%=gg.viper%> b viper" type="button" name="viper">바이퍼</button>
+          <button class="<%=gg.riki%> b riki" type="button" name="riki">리키</button>
+          <button class="<%=gg.templarassassin%> b templarassassin" type="button" name="templarassassin">템어</button>
+        </div>
+        <div class="warrior">
+          <p>워리어 (3)(6)(9)</p>
+          <button class="<%=gg.axe%> b axe" type="button" name="axe">액스</button>
+          <button class="<%=gg.tusk%> b tusk" type="button" name="tusk">터스크</button>
+          <button class="<%=gg.tiny%> b tiny" type="button" name="tiny">타이니</button>
+          <button class="<%=gg.juggernaut%> b juggernaut" type="button" name="juggernaut">저거넛</button>
+          <button class="<%=gg.slardar%> b slardar" type="button" name="slardar">슬라다</button>
+          <button class="<%=gg.lycan%> b lycan" type="button" name="lycan">라이칸</button>
+          <button class="<%=gg.kunkka%> b kunkka" type="button" name="kunkka">컨카</button>
+          <button class="<%=gg.doom%> b doom" type="button" name="doom">둠</button>
+          <button class="<%=gg.trollwarlord%> b trollwarlord" type="button" name="trollwarlord">트워</button>
+        </div>
+        <div class="hunter">
+          <p>헌터 (3)(6)</p>
+          <button class="<%=gg.drowranger%> b drowranger" type="button" name="drowranger">드렌</button>
+          <button class="<%=gg.beastmaster%> b beastmaster" type="button" name="beastmaster">비마</button>
+          <button class="<%=gg.sniper%> b sniper" type="button" name="sniper">스나</button>
+          <button class="<%=gg.windranger%> b windranger" type="button" name="windranger">윈레</button>
+          <button class="<%=gg.mirana%> b mirana" type="button" name="mirana">미라나</button>
+          <button class="<%=gg.medusa%> b medusa" type="button" name="medusa">메두사</button>
+          <button class="<%=gg.tidehunter%> b tidehunter" type="button" name="tidehunter">타헌</button>
+        </div>
+        <div class="knight">
+          <p>나이트 (2)(4)(6)</p>
+          <button class="<%=gg.batrider%> b batrider" type="button" name="batrider">뱃라</button>
+          <button class="<%=gg.chaosknight%> b chaosknight" type="button" name="chaosknight">카나</button>
+          <button class="<%=gg.luna%> b luna" type="button" name="luna">루나</button>
+          <button class="<%=gg.abbadon%> b abbadon" type="button" name="abbadon">아바돈</button>
+          <button class="<%=gg.omniknight%> b omniknight" type="button" name="omniknight">옴나</button>
+          <button class="<%=gg.dragonknight%> b dragonknight" type="button" name="dragonknight">드나</button>
+        </div>
+        <div class="druid">
+          <p>드루 (2)(4)</p>
+          <button class="<%=gg.enchantress%> b enchantress" type="button" name="enchantress">인챈</button>
+          <button class="<%=gg.treantprotector%> b treantprotector" type="button" name="treantprotector">나무</button>
+          <button class="<%=gg.furion%> b furion" type="button" name="furion">말퓨</button>
+          <button class="<%=gg.lonedruid%> b lonedruid" type="button" name="lonedruid">론드</button>
+        </div>
+        <hr>
+        <!-- %%%%%%%%%%%%%%%%%두개에 걸친 클라스%%%%%%%%%%%%%%%  -->
+        <h3 class="d-none d-md-inline-block">두개에 걸친 애들 (16)</h3>
+        <div class="goblin">
+          <p>고블린 (3)(6)</p>
+          <button class="<%=gg.bountyhunter%> b bountyhunter" type="button" name="bountyhunter">바헌</button>
+          <button class="<%=gg.clockwerk%> b clockwerk" type="button" name="clockwerk">클락</button>
+          <button class="<%=gg.tinker%> b tinker" type="button" name="tinker">팅커</button>
+          <button class="<%=gg.timbersaw%> b timbersaw" type="button" name="timbersaw">팀버</button>
+          <button class="<%=gg.alchemist%> b alchemist" type="button" name="alchemist">알케</button>
+          <button class="<%=gg.techies%> b techies" type="button" name="techies">테키</button>
+        </div>
+        <div class="troll">
+          <p>트롤 (2)(4)</p>
+          <button class="<%=gg.shadowshaman%> b shadowshaman" type="button" name="shadowshaman">샤먼</button>
+          <button class="<%=gg.batrider%> b batrider" type="button" name="batrider">뱃라</button>
+          <button class="<%=gg.witchdoctor%> b witchdoctor" type="button" name="witchdoctor">위닥</button>
+          <button class="<%=gg.trollwarlord%> b trollwarlord" type="button" name="trollwarlord">트워</button>
+        </div>
+        <div class="elemental">
+          <p>엘리멘탈 (2)(4)</p>
+          <button class="<%=gg.tiny%> b tiny" type="button" name="tiny">타이니</button>
+          <button class="<%=gg.morphling%> b morphling" type="button" name="morphling">물딩</button>
+          <button class="<%=gg.razor%> b razor" type="button" name="razor">레이저</button>
+          <button class="<%=gg.enigma%> b enigma" type="button" name="enigma">에닉마</button>
+        </div>
+        <div class="dehunter">
+          <p>데헌 (1)(2)</p>
+          <section id="synAll"></section>
+          <button class="<%=gg.antimage%> b antimage" type="button" name="antimage">안메</button>
+          <button class="<%=gg.terrorblade%> b terrorblade" type="button" name="terrorblade">테블</button>
+        </div>
+        <hr>
+        <!--%%%%%%%%%%%%%%%%%%% 전체적용 클라스%%%%%%%%%%%%%%%%% -->
+        <h2 class="d-none d-md-inline-block">전체 적용 (29) </h2>
+        <div class="beast">
+          <p>비스트 (2)(4)(6)</p>
+          <button class="<%=gg.enchantress%> b enchantress" type="button" name="enchantress">인챈</button>
+          <button class="<%=gg.tusk%> b tusk" type="button" name="tusk">터스크</button>
+          <button class="<%=gg.sandking%> b sandking" type="button" name="sandking">전갈</button>
+          <button class="<%=gg.venomancer%> b venomancer" type="button" name="venomancer">베노</button>
+          <button class="<%=gg.lycan%> b lycan" type="button" name="lycan">라이칸</button>
+          <button class="<%=gg.lonedruid%> b lonedruid" type="button" name="lonedruid">론드</button>
+        </div>
+        <div class="mage">
+          <p>메이지 (3)(6)</p>
+          <button class="<%=gg.ogremagi%> b ogremagi" type="button" name="ogremagi">오거</button>
+          <button class="<%=gg.crystalmaiden%> b crystalmaiden" type="button" name="crystalmaiden">크메</button>
+          <button class="<%=gg.puck%> b puck" type="button" name="puck">퍽</button>
+          <button class="<%=gg.razor%> b razor" type="button" name="razor">레이저</button>
+          <button class="<%=gg.lina%> b lina" type="button" name="lina">리나</button>
+          <button class="<%=gg.keeperofthelight%> b keeperofthelight" type="button" name="keeperofthelight">할배</button>
+          <button class="<%=gg.lich%> b lich" type="button" name="lich">리치</button>
+        </div>
+        <div class="warlock">
+          <p>워록 (3)(6)</p>
+          <button class="<%=gg.witchdoctor%> b witchdoctor" type="button" name="witchdoctor">위닥</button>
+          <button class="<%=gg.shadowfiend%> b shadowfiend" type="button" name="shadowfiend">쉐핀</button>
+          <button class="<%=gg.venomancer%> b venomancer" type="button" name="venomancer">베노</button>
+          <button class="<%=gg.alchemist%> b alchemist" type="button" name="alchemist">알케</button>
+          <button class="<%=gg.necrophos%> b necrophos" type="button" name="necrophos">네크로</button>
+          <button class="<%=gg.enigma%> b enigma" type="button" name="enigma">에닉마</button>
+          <button class="<%=gg.deathprophet%> b deathprophet" type="button" name="deathprophet">데프</button>
+        </div>
+        <div class="undead">
+          <p>언데드 (2)(4)</p>
+          <button class="<%=gg.drowranger%> b drowranger" type="button" name="drowranger">드렌</button>
+          <button class="<%=gg.abbadon%> b abbadon" type="button" name="abbadon">아바돈</button>
+          <button class="<%=gg.necrophos%> b necrophos" type="button" name="necrophos">네크로</button>
+          <button class="<%=gg.lich%> b lich" type="button" name="lich">리치</button>
+          <button class="<%=gg.deathprophet%> b deathprophet" type="button" name="deathprophet">데프</button>
+        </div>
+        <div class="naga">
+          <p>나가 (2)(4)</p>
+          <button class="<%=gg.slardar%> b slardar" type="button" name="slardar">슬라다</button>
+          <button class="<%=gg.slark%> b slark" type="button" name="slark">슬라크</button>
+          <button class="<%=gg.medusa%> b medusa" type="button" name="medusa">메두사</button>
+          <button class="<%=gg.tidehunter%> b tidehunter" type="button" name="tidehunter">타헌</button>
+        </div>
+        <div class="shaman">
+          <p>샤먼 (2)</p>
+          <button class="<%=gg.shadowshaman%> b shadowshaman" type="button" name="shadowshaman">섀도샤먼</button>
+          <button class="<%=gg.disruptor%> b disruptor" type="button" name="disruptor">디럽</button>
+        </div>
+        <div class="satyr">
+          <p>찐따 (1)</p>
+          <button class="<%=gg.riki%> b riki" type="button" name="riki">리키</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Row -->
+</div>
+<!-- end container-fluid -->
+<hr>
+
+<%- include('partials/footer') %>

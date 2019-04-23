@@ -1,0 +1,464 @@
+/* title icon */
+i {
+  width: 24px;
+  height: 24px;
+}
+
+/* top buttons margin fix */
+.d-none {
+  margin-top: 5px;
+}
+
+.pb-2, .py-2 {
+  padding-top: 1rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* body bg default: black, font: white , reset margin*/
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-size: 170%;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+p {
+  margin-top: 0.44rem;
+  margin-bottom: 0;
+  color: #f6e5e5;
+}
+
+.container-fluid {
+  margin-top: 25px;
+}
+
+.container {
+  margin-top: 0.11rem;
+  max-width: 960px;
+}
+
+.site-header {
+  background-color: rgba(0, 0, 0, .89);
+  /* -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px); */
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Navbar
+ */
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.synergy {
+  color: #f6e5e5;
+  font-weight: bold;
+  text-shadow: 1.1px 1.1px #774181;
+}
+
+.sidemenu {
+  /* padding-left: 33px;  */
+  position: fixed;
+  color: #e6b2c6;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+@media (min-width:768px) {
+  .container {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width:767px) {
+  h1 {
+    font-size: 150%;
+  }
+
+  .sidemenu {
+    position: sticky;
+    font-size: 80%;
+    top: 49px;
+    z-index: 100;
+  }
+
+  .mainmenu {
+    display: flex;
+  }
+}
+
+@media (max-width:462px) {
+  .mainmenu: {
+    /* padding-top: 100px !important; */
+    position: relative;
+  }
+
+  .sidemenu {
+    padding-top: 22px;
+    top: 49px;
+    /* position: fixed; */
+  }
+}
+
+
+/* 버튼 기본 스타일 삭제 후 둥글게 변경 */
+button {
+  outline: 0;
+  border: 0;
+  border-radius: 15px;
+  /* box-shadow: 2px 2px #022C43; */
+}
+
+.buttons, .buttons-secondpage {
+  font-size: 75%;
+}
+
+.buttons button, .buttons-secondpage button {
+  font-size: 75%;
+}
+
+.gold-one .unitBox {
+  /* border: 0.18rem solid #6F6F6F; */
+  box-shadow: 0.17rem 0.14rem 0.3rem #6F6F6F;
+}
+
+.gold-two .unitBox {
+  /* border: 0.18rem solid #8A89B0; */
+  box-shadow: 0.17rem 0.14rem 0.3rem #8A89B0;
+}
+
+.gold-three .unitBox {
+  /* border: 0.18rem solid #45417F; */
+  box-shadow: 0.17rem 0.14rem 0.3rem #544ed8;
+}
+
+.gold-four .unitBox {
+  /* border: 0.18rem solid #9D16A0; */
+  box-shadow: 0.17rem 0.14rem 0.3rem #9D16A0;
+}
+
+.gold-five .unitBox {
+  /* border: 0.18rem solid #905427; */
+  box-shadow: 0.17rem 0.14rem 0.1rem #905427;
+}
+
+.unitBox {
+  /* position: relative; */
+  display: inline-block;
+  padding: 0;
+  margin: 0.25rem 0.02rem auto auto;
+  border-radius: 16px;
+}
+
+.unitText {
+  margin: 0.2px 0 0 2px;
+  position: absolute;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px #022C43;
+}
+
+/* b = 버튼틀 */
+.b {
+  width: 61px;
+  height: 61px;
+  background-size: 70px;
+  background-position: center;
+  color: white;
+  font-size: 0.77rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px #022C43;
+  /* 1골드 border: #6F6F6F; */
+  /* 2골드 : #8A89B0 */
+  /* #45417F */
+  /* #9D16A0 */
+  /* #905427 */
+}
+@media (max-width:365px) {
+  .b {
+    font-size: 0.45rem;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* 클릭하면 토글되어야 해서 따로 뺌 */
+.g {
+  opacity: 0.3;
+}
+
+/* 이미지 */
+.axe {
+  background-image: url("images/axe.png");
+}
+
+.enchantress {
+  background-image: url("images/enchantress.png");
+}
+
+.ogremagi {
+  background-image: url(images/ogremagi.png);
+}
+
+.tusk {
+  background-image: url(images/tusk.png);
+}
+
+.drowranger {
+  background-image: url(images/drowranger.png);
+}
+
+.clockwerk {
+  background-image: url(images/clockwerk.png);
+}
+
+.bountyhunter {
+  background-image: url(images/bountyhunter.png);
+}
+
+.tinker {
+  background-image: url(images/tinker.png);
+}
+
+.shadowshaman {
+  background-image: url(images/shadowshaman.png);
+}
+
+.batrider {
+  background-image: url(images/batrider.png);
+}
+
+.antimage {
+  background-image: url(images/antimage.png);
+}
+
+.tiny {
+  background-image: url(images/tiny.png);
+}
+
+.crystalmaiden {
+  background-image: url(images/crystalmaiden.png);
+}
+
+.beastmaster {
+  background-image: url(images/beastmaster.png);
+}
+
+.juggernaut {
+  background-image: url(images/juggernaut.png);
+}
+
+.timbersaw {
+  background-image: url(images/timbersaw.png);
+}
+
+.queenofpain {
+  background-image: url(images/queenofpain.png);
+}
+
+.puck {
+  background-image: url(images/puck.png);
+}
+
+.witchdoctor {
+  background-image: url(images/witchdoctor.png);
+}
+
+.slardar {
+  background-image: url(images/slardar.png);
+}
+
+.chaosknight {
+  background-image: url(images/chaosknight.png);
+}
+
+.treantprotector {
+  background-image: url(images/treantprotector.png);
+}
+
+.luna {
+  background-image: url(images/luna.png);
+}
+
+.furion {
+  background-image: url(images/furion.png);
+}
+
+.morphling {
+  background-image: url(images/morphling.png);
+}
+
+.slark {
+  background-image: url(images/slark.png);
+}
+
+.abbadon {
+  background-image: url(images/abbadon.png);
+}
+
+.shadowfiend {
+  background-image: url(images/shadowfiend.png);
+}
+
+.lycan {
+  background-image: url(images/lycan.png);
+}
+
+.phantomassassin {
+  background-image: url(images/phantomassassin.png);
+}
+
+.terrorblade {
+  background-image: url(images/terrorblade.png);
+}
+
+.sandking {
+  background-image: url(images/sandking.png);
+}
+
+.razor {
+  background-image: url(images/razor.png);
+}
+
+.lina {
+  background-image: url(images/lina.png);
+}
+
+.viper {
+  background-image: url(images/viper.png);
+}
+
+.sniper {
+  background-image: url(images/sniper.png);
+}
+
+.windranger {
+  background-image: url(images/windranger.png);
+}
+
+.omniknight {
+  background-image: url(images/omniknight.png);
+}
+
+.venomancer {
+  background-image: url(images/venomancer.png);
+}
+
+.riki {
+  background-image: url(images/riki.png);
+}
+
+.mirana {
+  background-image: url(images/mirana.png);
+}
+
+.dragonknight {
+  background-image: url(images/dragonknight.png);
+}
+
+.lonedruid {
+  background-image: url(images/lonedruid.png);
+}
+
+.kunkka {
+  background-image: url(images/kunkka.png);
+}
+
+.medusa {
+  background-image: url(images/medusa.png);
+}
+
+.templarassassin {
+  background-image: url(images/templarassassin.png);
+}
+
+.disruptor {
+  background-image: url(images/disruptor.png);
+}
+
+.doom {
+  background-image: url(images/doom.png);
+}
+
+.alchemist {
+  background-image: url(images/alchemist.png);
+}
+
+.necrophos {
+  background-image: url(images/necrophos.png);
+}
+
+.trollwarlord {
+  background-image: url(images/trollwarlord.png);
+}
+
+.keeperofthelight {
+  background-image: url(images/keeperofthelight.png);
+}
+
+.lich {
+  background-image: url(images/lich.png);
+}
+
+.tidehunter {
+  background-image: url(images/tidehunter.png);
+}
+
+.enigma {
+  background-image: url(images/enigma.png);
+}
+
+.gyrocopter {
+  background-image: url(images/gyrocopter.png);
+}
+
+.techies {
+  background-image: url(images/techies.png);
+}
+
+.deathprophet {
+  background-image: url(images/deathprophet.png);
+}
